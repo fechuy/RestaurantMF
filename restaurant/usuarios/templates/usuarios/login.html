@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css_block %}
+	<link rel="stylesheet" href="{% static 'productos/css/productos.css' %}">
+{% endblock %}
+{% block title_block %}
+	<title>Iniciar Sesión</title>
+{% endblock %}
+{% block content_block %}
+<div class="jumbotron" id="content">
+	<h1>Inicia Sesion</h1>
+	<form action=" {% url 'usuarios:login' %} " method="post">
+		{% csrf_token %}
+		<div class="formgrup">
+			<label for="username">Usuario:<input type="text" name="username" class="form-control" placeholder="Nombre de Usuario"></label>
+		</div>
+		<br>
+		<div class="formgrup">
+			<label for="password">Contraseña:<input type="password" name="password" class="form-control" placeholder="Contraseña"></label>
+		</div>
+		<br>
+		<input class="btn btn-primary" type="submit" value="Iniciar sesion">
+	</form>
+</div>
+{% endblock %}
