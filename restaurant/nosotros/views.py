@@ -11,3 +11,7 @@ from . import models
 
 class nosotosTemplateView(TemplateView):
 		template_name = 'nosotros/contact.html'
+
+class acercaTemplateView(TemplateView):
+	template_name = 'nosotros/us.html'
+		

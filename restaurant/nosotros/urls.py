@@ -20,4 +20,5 @@ app_name = 'nosotros'
 
 urlpatterns = [   
     path('nosotros/', views.nosotosTemplateView.as_view(), name='nosotros'),
+    path('acerca/', views.acercaTemplateView.as_view(), name='acerca'),
 ]

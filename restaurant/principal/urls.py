@@ -19,4 +19,5 @@ from principal import views
 app_name = 'principal'
 
 urlpatterns = [
+	path('reservacion/', views.reservacionTemplateView.as_view(), name='reservacion'),
 ]

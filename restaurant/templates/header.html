@@ -17,31 +17,23 @@
 						<nav class="menu">
 							<ul class="main_menu">
 								<li>
-									<a href="index.html">Principal</a>
+									<a href="{% url 'index' %}">Principal</a>
 								</li>
 
 								<li>
-									<a href="menu.html">Menu</a>
+									<a href="{% url 'productos:menu' %}">Menu</a>
 								</li>
 
 								<li>
-									<a href="reservation.html">Reservacion</a>
+									<a href="{% url 'principal:reservacion' %}">Reservacion</a>
 								</li>
 
 								<li>
-									<a href="gallery.html">Galeria</a>
+									<a href="{% url 'nosotros:acerca' %}">Aserca de</a>
 								</li>
 
 								<li>
-									<a href="about.html">Aserca de</a>
-								</li>
-
-								<li>
-									<a href="blog.html">Blog</a>
-								</li>
-
-								<li>
-									<a href="contact.html">Contactanos</a>
+									<a href="{% url 'nosotros:nosotros' %}">Contactanos</a>
 								</li>
 							</ul>
 						</nav>
