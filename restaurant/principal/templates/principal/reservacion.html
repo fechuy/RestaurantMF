@@ -4,13 +4,13 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({% static 'images/bg-title-page-02.jpg' %});">
 		<h2 class="tit6 t-center">
-			Reservation
+			Reservacion
 		</h2>
 	</section>
 	<section class="section-reservation bg1-pattern p-t-100 p-b-113">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12 p-b-30">
+				<!--div class="col-lg-12 p-b-30">
 					<div class="t-center">
 						<span class="tit2 t-center">
 							Reservation
@@ -24,7 +24,7 @@
 					<form class="wrap-form-reservation size22 m-l-r-auto">
 						<div class="row">
 							<div class="col-md-4">
-								<!-- Date -->
+								
 								<span class="txt9">
 									Date
 								</span>
@@ -36,13 +36,13 @@
 							</div>
 
 							<div class="col-md-4">
-								<!-- Time -->
+								
 								<span class="txt9">
 									Time
 								</span>
 
 								<div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<!-- Select2 -->
+									
 									<select class="selection-1" name="time">
 										<option>9:00</option>
 										<option>9:30</option>
@@ -68,13 +68,13 @@
 							</div>
 
 							<div class="col-md-4">
-								<!-- People -->
+								
 								<span class="txt9">
 									People
 								</span>
 
 								<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<!-- Select2 -->
+									
 									<select class="selection-1" name="people">
 										<option>1 person</option>
 										<option>2 people</option>
@@ -95,7 +95,7 @@
 
 						<div class="row">
 							<div class="col-md-4">
-								<!-- Name -->
+								
 								<span class="txt9">
 									Name
 								</span>
@@ -106,7 +106,7 @@
 							</div>
 
 							<div class="col-md-4">
-								<!-- Phone -->
+								
 								<span class="txt9">
 									Phone
 								</span>
@@ -117,7 +117,7 @@
 							</div>
 
 							<div class="col-md-4">
-								<!-- Email -->
+								
 								<span class="txt9">
 									Email
 								</span>
@@ -130,13 +130,19 @@
 						</div>
 
 						<div class="wrap-btn-booking flex-c-m m-t-6">
-							<!-- Button3 -->
-							<button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4">
+							class="btn3 flex-c-m size13 txt11 trans-0-4">
 								Book Table
 							</button>
 						</div>
 					</form>
-				</div>
+				</div-->
+				<form method="post" enctype='multipart/form-data'>
+					<div class="formgrup">				
+						{% csrf_token %}
+						{{ form.as_p }}				
+						<input type="submit" class="btn btn-primary" value="Aceptar">
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>

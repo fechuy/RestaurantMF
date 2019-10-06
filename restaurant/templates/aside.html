@@ -7,34 +7,27 @@
 		<!-- - -->
 		<ul class="menu-sidebar p-t-95 p-b-70">
 			<li class="t-center m-b-13">
-				<a href="index.html" class="txt19">Principal</a>
+				<a href="{% url 'index' %}">Principal</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="menu.html" class="txt19">Menu</a>
+				<a href="{% url 'productos:menu' %}">Menu</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="gallery.html" class="txt19">Galeria</a>
+				<a href="{% url 'principal:reservacion' %}">Reservacion</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="about.html" class="txt19">Acerca de</a>
+				<a href="{% url 'nosotros:acerca' %}">Aserca de</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="blog.html" class="txt19">Blog</a>
+				<a href="{% url 'nosotros:nosotros' %}">Contactanos</a>
 			</li>
 
-			<li class="t-center m-b-33">
-				<a href="contact.html" class="txt19">Contactanos</a>
-			</li>
-
-			<li class="t-center">
-				<!-- Button3 -->
-				<a href="reservation.html" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-					Reservacion
-				</a>
+			<li class="t-center m-b-13">
+				<a href="{% url 'usuarios:login' %}">Iniciar Sesion</a>
 			</li>
 		</ul>
 
