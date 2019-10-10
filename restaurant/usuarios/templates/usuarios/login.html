@@ -7,19 +7,23 @@
 	<title>Iniciar Sesión</title>
 {% endblock %}
 {% block content_block %}
-<div class="jumbotron" id="content">
-	<h1>Inicia Sesion</h1>
-	<form action=" {% url 'usuarios:login' %} " method="post">
-		{% csrf_token %}
-		<div class="formgrup">
-			<label for="username">Usuario:<input type="text" name="username" class="form-control" placeholder="Nombre de Usuario"></label>
-		</div>
-		<br>
-		<div class="formgrup">
-			<label for="password">Contraseña:<input type="password" name="password" class="form-control" placeholder="Contraseña"></label>
-		</div>
-		<br>
-		<input class="btn btn-primary" type="submit" value="Iniciar sesion">
-	</form>
-</div>
+	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({% static 'images/bg-title-page-02.jpg' %});">
+		<h2 class="tit6 t-center">
+			Iniciar Sesion
+		</h2>
+	</section>
+	<div class="jumbotron" id="content" style="">
+		<form action=" {% url 'usuarios:login' %} " method="post">
+			{% csrf_token %}
+			<div class="formgrup">
+				<label for="username">Usuario:<input type="text" name="username" class="form-control" placeholder="Nombre de Usuario"></label>
+			</div>
+			<br>
+			<div class="formgrup">
+				<label for="password">Contraseña:<input type="password" name="password" class="form-control" placeholder="Contraseña"></label>
+			</div>
+			<br>
+			<input class="btn btn-primary" type="submit" value="Iniciar sesion">
+		</form>
+	</div>
 {% endblock %}

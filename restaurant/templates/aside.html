@@ -3,7 +3,11 @@
 	<aside class="sidebar trans-0-4">
 		<!-- Button Hide sidebar -->
 		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
-
+		<h3>
+			{% if request.user.is_authenticated %}
+				Bienvenido {{request.user}}
+			{% endif %}
+		</h3>
 		<!-- - -->
 		<ul class="menu-sidebar p-t-95 p-b-70">
 			<li class="t-center m-b-13">
@@ -27,7 +31,11 @@
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="{% url 'usuarios:login' %}">Iniciar Sesion</a>
+				{% if request.user.is_authenticated %}
+					<a href="{% url 'usuarios:logout' %}">Cerrar Sesión</a
+				{% else %}
+					<a href=" {% url 'usuarios:login' %} ">Inicia Sesión</a>			
+				{% endif %}
 			</li>
 		</ul>
 
