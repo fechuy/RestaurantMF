@@ -22,4 +22,6 @@ urlpatterns = [
     path('', views.user_logout, name='logout'),    
     path('registro/', views.registro, name='registro'),
     path('login/', views.user_login, name='login'),
+    path('listaReservacion/', views.verReservacionListView.as_view(), name='listaReservacion'),
+    #path('reservacion/', views.reservacionesCreateView.as_view(), name='reservacion')
 ]

@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from . import models
+from principal.models import Reservaciones
 # Create your views here.
 
 @login_required
@@ -63,3 +64,8 @@ def user_login(request):
 			return HttpResponse("Login invalido")
 	else:
 		return render(request, 'usuarios/login.html', {})
+
+class verReservacionListView(ListView):
+	template_name = 'usuarios/listaReservacion.html'
+	context_object_name = 'reservaciones'
+	model = Reservaciones

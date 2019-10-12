@@ -1,22 +1,25 @@
 {% extends "head.html" %}
 {% load static %}
+{% block title_block %}
+	<title>Reservaciones</title>
+{% endblock title_block %}
 {% block content_block %}
-	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({% static 'images/bg-title-page-02.jpg' %});">
 		<h2 class="tit6 t-center">
-			Reservacion
+			Reservaciones Hechas
 		</h2>
 	</section>
 	<section class="section-reservation bg1-pattern p-t-100 p-b-113">
 		<div class="container">
-			<div class="row">				
-				<form method="post" enctype='multipart/form-data'>
-					<div class="formgrup">				
-						{% csrf_token %}
-						{{ form.as_p }}				
-						<input type="submit" class="btn btn-primary" value="Aceptar">
-					</div>
-				</form>
+			<h3>Reservaciones</h3><br><br>
+			<div class="row">
+				<div>
+					<ol>
+						{% for reservacion in reservaciones %}
+						   	<li>{{reservacion.nombre_reservacion}}</li>
+						{% endfor %}
+					</ol>
+				</div>
 			</div>
 		</div>
 	</section>

@@ -1,0 +1,10 @@
+{% extends "head.html" %}
+{% load static %}
+{% block titleblock %}
+	
+{% endblock titleblock %}
+{% block content_block %}
+	{% for reservacion in reservaciones %}
+    	<li>{{reservacion.nombre_reservacion}}</li>
+    {% endfor %}
+{% endblock content_block %}
